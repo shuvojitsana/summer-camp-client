@@ -1,0 +1,155 @@
+[
+    {
+      "_id": "6481db1996b2ad03ca04d533",
+      "index": 0,
+      "category": "popular_teacher",
+      "price": 50,
+      "image": "https://www.tgcindia.com/wp-content/uploads/2018/10/Optimized-Hobby-Sunday-Photography-course-in-Delhi.jpg",
+      "name": "Basic Course",
+      "Instructor_name":"Kaitlin Espinoza",
+      "Available_seats": 12,
+      "about": "Sit irure Lorem ex irure mollit. Sunt non laborum minim minim veniam aliqua aliquip non mollit aliquip magna. Et culpa duis aute deserunt. Id in occaecat amet laborum pariatur proident labore excepteur in duis. Sit culpa qui tempor qui excepteur sunt.\r\n"
+    },
+    {
+      "_id": "6481db19357944b3dc585cf6",
+      "index": 1,
+      "category": "popular",
+      "price": 50,
+      "image": "https://previews.123rf.com/images/peopleimages12/peopleimages122203/peopleimages12220320872/183490177-i-have-to-post-this-on-my-social-media-cropped-shot-of-an-unrecognizable-artist-standing-and-taking.jpg",
+      "name": "Mobile Photography",
+      "Instructor_name":"Combs Powers",
+      "Available_seats": 15,
+      "about": "Id incididunt in culpa ex laboris commodo laborum id Lorem magna Lorem sint. Quis aute veniam id elit id labore et elit id eiusmod labore non. Ut velit ea cupidatat deserunt eu veniam incididunt magna commodo Lorem amet. Exercitation officia velit sint officia eiusmod cillum et laboris voluptate tempor cupidatat id ullamco mollit. Qui id laboris amet consectetur quis proident sit. Cillum est non nulla incididunt elit nisi dolore nulla in in cupidatat tempor sunt. Ex exercitation irure laboris irure ipsum quis enim veniam adipisicing deserunt Lorem laborum.\r\n"
+    },
+    {
+      "_id": "6481db19701d39fb3afa69d9",
+      "index": 2,
+      "category": "popular",
+      "price": 50,
+      "image": "https://www.digi5studios.com/blog/wp-content/uploads/2017/04/skin-example-1024x731.jpg",
+      "name": "Photo Retouching",
+      "Instructor_name":"Shuvo jit kumar",
+      "Available_seats": 15,
+      "about": "Enim dolor consectetur nostrud dolore dolore et laboris veniam ipsum velit ad. Id cillum id aliquip in irure non duis. Consequat aliqua nulla ea consequat est. Quis mollit laborum laboris minim consectetur incididunt commodo consequat. Voluptate sunt nisi tempor ea voluptate eiusmod. Cillum aute in ipsum reprehenderit sunt eiusmod.\r\n"
+    },
+    {
+      "_id": "6481db19142623452d95ad54",
+      "index": 3,
+      "category": "popular_teacher",
+      "price": 50,
+      "image": "https://infoguidenigeria.com/wp-content/uploads/2018/04/photo-studio.jpg",
+      "name": "Sutdio Photography",
+      "Instructor_name":"Greta Hall",
+      "Available_seats": 15,
+      "about": "Anim mollit sit aliquip aute voluptate velit aute veniam est amet sint voluptate ea do. Voluptate incididunt dolor deserunt eiusmod labore in enim nostrud est tempor. Irure consequat occaecat consequat do. Anim minim anim nostrud veniam consequat pariatur reprehenderit incididunt velit cillum dolor laboris proident. Ipsum proident aliquip occaecat ullamco aliquip irure id adipisicing pariatur nostrud sit. In consectetur labore proident veniam est duis sit tempor sint amet esse. Cillum exercitation aliquip proident commodo.\r\n"
+    },
+    {
+      "_id": "6481db19a5977cf6fe00a0c1",
+      "index": 4,
+      "category": "popular",
+      "price": 50,
+      "image": "https://images.pexels.com/photos/1054713/pexels-photo-1054713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "name": "Video Edite and Photography",
+      "Instructor_name":"Jeannie Finley",
+      "Available_seats": 15,
+      "about": "Laboris incididunt occaecat in nostrud proident incididunt duis. Sunt enim laborum in eu ipsum exercitation. Consequat esse sint do est laboris dolore. Excepteur deserunt ex occaecat minim Lorem labore qui. Laboris commodo fugiat reprehenderit dolor ipsum quis ea aliquip id quis.\r\n"
+    },
+    {
+      "_id": "6481db19686f3eaf13fc288e",
+      "index": 5,
+      "category": "popular_teacher",
+      "price": 50,
+      "image": "https://webneel.com/daily/sites/default/files/images/daily/01-2013/16-fashion-photo.jpg",
+      "name": "Fashion Photography",
+      "Instructor_name":"Kaitlin Espinoza",
+      "Available_seats": 15,
+      "about": "Ut aute ad pariatur eu sint sunt consectetur veniam incididunt veniam proident. Ea minim nulla aliqua reprehenderit in. Cupidatat cillum cupidatat culpa ex consectetur laborum cillum aliqua. Ad nisi ullamco nostrud esse nostrud aliquip sint deserunt deserunt. Lorem reprehenderit do voluptate dolore consequat. Laborum qui laboris id laborum ullamco sunt Lorem nostrud eiusmod aute adipisicing.\r\n"
+    },
+    {
+      "_id": "6481db19d3b089af452a86e4",
+      "index": 6,
+      "category": "popular_teacher",
+      "price": 50,
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/3eea71170381825.645ccf61df11c.jpg",
+      "name": "Product Photography",
+      "Instructor_name":"Joy Mondal",
+      "Available_seats": 15,
+      "about": "Lorem occaecat magna sit nulla deserunt magna incididunt dolor excepteur amet est officia mollit dolore. Do adipisicing voluptate consequat qui irure incididunt voluptate ex consequat Lorem consequat quis veniam officia. Veniam adipisicing sit nostrud elit velit ad Lorem irure ad ex. Non Lorem adipisicing aliquip aute id deserunt quis est nisi aute aliquip eu laboris cillum. Ad aliqua amet amet sunt tempor aliquip dolore enim quis sint labore irure veniam enim. Incididunt eu irure laboris nisi mollit sit laboris mollit est consectetur cupidatat ea nisi. Sit incididunt labore ullamco fugiat.\r\n"
+    },
+    {
+      "_id": "6481db19cb95849bade58283",
+      "index": 7,
+      "price": 50,
+      "image": "https://cdn1.matadornetwork.com/blogs/1/2021/03/Contemporary-Arts-Center.jpg",
+      "name": "Architectural Photography",
+      "Instructor_name":"Combs Powers",
+      "Available_seats": 16,
+      "about": "Eiusmod dolore exercitation do pariatur cillum elit culpa culpa minim. Labore voluptate et adipisicing sint. Non aliqua non occaecat eiusmod laboris deserunt officia ut Lorem laborum. Ea excepteur laboris laborum consequat cillum eiusmod reprehenderit duis id velit. Anim veniam magna exercitation enim ad.\r\n"
+    },
+    {
+      "_id": "6481db19238982def1d4f4c1",
+      "index": 8,
+      "category": "popular",
+      "price": 50,
+      "image": "https://www.juliet-artmagazine.com/wp-content/uploads/2021/07/Bazan-Castro.jpg",
+      "name": "Documentary Photography",
+      "Instructor_name":"Jeannie Finley",
+      "Available_seats": 14,
+      "about": "Aliqua consectetur ut cillum sunt anim non id officia dolor quis nulla. Dolore officia ex nulla anim sunt reprehenderit sunt veniam do ad aute laborum duis. Elit ad cillum excepteur magna labore officia commodo duis commodo cillum tempor eu nostrud. Cillum nulla eiusmod excepteur aliquip duis occaecat irure ex eiusmod et. Amet commodo nulla exercitation commodo. Occaecat duis minim ea eu laborum esse excepteur enim non. Laborum fugiat veniam dolore sunt et.\r\n"
+    },
+    {
+      "_id": "6481db19901d64e34b307adb",
+      "index": 9,
+      "category": "popular_teacher",
+      "price": 50,
+      "image": "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153366498/settings_images/6b7e04-fd52-74e8-8fcd-17f044ef740b_Levitation.jpg",
+      "name": "Fine Art Photography",
+      "Instructor_name":"Young Tyson",
+      "Available_seats": 14,
+      "about": "Tempor culpa fugiat ut et proident ullamco non ex minim Lorem. Velit reprehenderit ex nulla nisi. Ullamco pariatur et irure proident fugiat exercitation amet et id voluptate.\r\n"
+    },
+    {
+      "_id": "6481db19b57c36587720b68a",
+      "index": 10,
+      "category": "popular",
+      "price": 50,
+      "image": "https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2020/09/Creative-techniques-10.jpg?w=1500&ssl=1",
+      "name": "Beginner Photography",
+      "Instructor_name":"Brandi Salas",
+      "Available_seats": 11,
+      "about": "Commodo irure proident non incididunt anim et. Consequat reprehenderit nulla culpa enim qui ut ea est sint tempor eu. Magna elit commodo tempor exercitation fugiat anim fugiat culpa Lorem. Adipisicing ipsum commodo pariatur cillum. Cillum excepteur excepteur esse enim ullamco id dolore.\r\n"
+    },
+    {
+      "_id": "6481db1917342fb045a74d82",
+      "index": 11,
+      "category": "popular_teacher",
+      "price": 99,
+      "image": "https://35photo.pro/photos_series/1759/1759089.jpg",
+      "name": "Portrait Photography",
+      "Instructor_name":"Greta Hall",
+      "Available_seats": 16,
+      "about": "Ut aliqua cupidatat et laborum dolore fugiat reprehenderit dolore enim eu nostrud adipisicing velit. Do elit ad cupidatat veniam culpa magna esse fugiat non tempor id. Exercitation velit ullamco excepteur tempor velit. Ea adipisicing laborum et eiusmod. Esse aliqua quis dolor non velit consequat enim irure culpa consequat nisi incididunt magna nulla. Sint elit ea dolore in.\r\n"
+    },
+    {
+      "_id": "6481db19e515e39e8ad86ce4",
+      "index": 12,
+      "category": "popular_teacher",
+      "price": 160,
+      "image": "https://ipt.imgix.net/203511/x/0/what-is-landscape-photography-1.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883",
+      "name": "Landscape Photography",
+      "Instructor_name":"Joy Mondal",
+      "Available_seats": 15,
+      "about": "Dolor do laborum Lorem deserunt est laborum et exercitation proident veniam enim magna irure. Consectetur occaecat pariatur id nulla ipsum nulla est aute irure. Nulla sunt magna est voluptate. Deserunt esse consectetur ex laboris anim elit laborum cillum commodo voluptate occaecat voluptate sit deserunt. Elit culpa eu est ipsum laboris duis exercitation aliqua pariatur. Et duis aliquip pariatur adipisicing.\r\n"
+    },
+    {
+      "_id": "6481db19773e0433d17331fc",
+      "index": 13,
+      "category": "popular",
+      "price": 95,
+      "image": "https://images.pexels.com/photos/7944655/pexels-photo-7944655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "name": "Wildlife Photography",
+      "Instructor_name":"Shuvo jit kumar",
+      "Available_seats": 17,
+      "about": "Incididunt non magna pariatur occaecat sit tempor est laboris duis quis nulla enim. Veniam commodo eu labore reprehenderit sunt ex magna nulla nulla. Adipisicing dolore adipisicing nulla excepteur aute dolore aute ut do est culpa labore."
+    }
+  ]
