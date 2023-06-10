@@ -3,13 +3,14 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from 'sweetalert2';
+import { FaGoogle } from "react-icons/fa";
 
 
 
 const Login = () => {
     const { register,  formState: { errors } } = useForm();
 
-    const {signIn} = useContext(AuthContext);
+    const {signIn, handleGoogleSignIn} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -20,7 +21,6 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
 
         signIn(email, password)
         .then(result => {
@@ -70,6 +70,9 @@ const Login = () => {
 
                     </div>
                     <p className="pb-5 text-center">New here? Create a New Account: <Link to="/register" className="text-[#ea4a34]">Sign up</Link></p>
+                    <button onClick={handleGoogleSignIn} className=" flex justify-center items-center">
+                        <span className="btn w-14 h-14 rounded-full hover:text-white  hover:bg-[#ea4a34] text-center"><FaGoogle></FaGoogle></span>
+                        </button>
                 </div>
             </div>
         </div>

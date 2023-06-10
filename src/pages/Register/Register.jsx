@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
@@ -10,6 +10,7 @@ const Register = () => {
     const { register, handleSubmit, reset,   formState: { errors },  } = useForm();
     const {createUser, updateUserProfile, handleGoogleSignIn} = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
 
 
     const onSubmit = data => {
@@ -29,7 +30,7 @@ const Register = () => {
                     showConfirmButton: false,
                     timer: 1500
                   })
-                  navigate('/');
+                  navigate('/', {state: {from: location}});
             })
             .catch(error => console.log(error))
         })

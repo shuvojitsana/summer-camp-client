@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useClasses from "../../hooks/useClasses";
 
 
 const NavBar = () => {
 
     const { user, logOut } = useContext(AuthContext);
+    const [classes] = useClasses();
 
     const handleLogOut = () => {
         logOut()
@@ -24,7 +26,7 @@ const NavBar = () => {
             <Link to="/dashboard/mySelectedClass">
                 <button className="btn">
                     Dashboard
-                    <div className="badge badge-secondary">+0</div>
+                    <div className="badge badge-secondary">+{classes?.length || 0}</div>
                 </button>
             </Link>
         </li>

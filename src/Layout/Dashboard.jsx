@@ -1,8 +1,10 @@
 import { FaHome, FaWallet } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
+import useClasses from "../hooks/useClasses";
 
 
 const Dashboard = () => {
+    const [classes] = useClasses();
     return (
         <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -18,7 +20,11 @@ const Dashboard = () => {
             {/* Sidebar content here */}
             <li><NavLink to="/dashboard/userHome"><FaHome></FaHome> User Home</NavLink></li>
             <li><NavLink to="/dashboard/paymentsHistory"><FaWallet></FaWallet> Payments History</NavLink></li>
-            <li><NavLink to="/dashboard/mySelectedClass">My Selected Class</NavLink></li>
+            <li>
+              <NavLink to="/dashboard/mySelectedClass">My Selected Class
+              <span className="badge badge-secondary">+{classes?.length || 0}</span>
+            </NavLink>
+            </li>
             <li><NavLink to="/dashboard/myEnrolledClasses">My Enrolled Classes</NavLink></li>
 
             <div className="divider"></div>

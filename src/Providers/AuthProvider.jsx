@@ -6,10 +6,12 @@ import Swal from "sweetalert2";
 
 
 
+
 export const AuthContext = createContext(null);
 
 const auth = getAuth(app);
 const googleProvider =new GoogleAuthProvider();
+
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
@@ -44,13 +46,15 @@ const AuthProvider = ({ children }) => {
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser);
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'User created successfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                  })
+            Swal.fire({
+                title: 'User Login successfully!',
+                showClass: {
+                  popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                  popup: 'animate__animated animate__fadeOutUp'
+                }
+              });
                   
             setUser(loggedUser);
         })

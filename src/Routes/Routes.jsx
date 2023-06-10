@@ -52,7 +52,7 @@ import MySelectedClass from "../pages/Dashboard/My_Selected_Classes/MySelectedCl
     },
     {
       path:'dashboard',
-      element:<Dashboard></Dashboard>,
+      element:<PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
       errorElement:<Error></Error>,
       children:[
         {
