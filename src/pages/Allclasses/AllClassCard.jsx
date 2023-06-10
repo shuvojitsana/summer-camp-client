@@ -1,10 +1,12 @@
 
-import { Link } from "react-router-dom";
-
 
 const AllClassCard = ({ item }) => {
     const { name, image, price, Available_seats, Instructor_name } = item;
-    console.log(item);
+
+
+    const handleAddToClass = item =>{
+        console.log(item);
+    }
     return (
         <div>
             <div>
@@ -18,7 +20,7 @@ const AllClassCard = ({ item }) => {
                         <h2 className="card-title">{name}</h2>
                         <p className="text-1xl font-serif"> {Instructor_name}</p>
                         <p> Available_seats: {Available_seats}</p>
-                        <Link><button className="btn bg-[#ea4a34] text-white hover:text-[#ea4a34] flex gap-7 items-center justify-center">Selected class</button></Link>
+                        <button onClick={() => handleAddToClass(item)} className="btn bg-[#ea4a34] text-white hover:text-[#ea4a34] flex gap-7 items-center justify-center">Selected class</button>
                     </div>
                 </div>
                 

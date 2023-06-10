@@ -21,8 +21,14 @@ const NavBar = () => {
         <li><Link to="/instructors">Instructors</Link></li>
         <li><Link to="/allClasses">All Classes</Link></li>
         <li>
-            <Link to="/dashboard/mySelectedClass">Dashboard</Link>
+            <Link to="/dashboard/mySelectedClass">
+                <button className="btn">
+                    Dashboard
+                    <div className="badge badge-secondary">+0</div>
+                </button>
+            </Link>
         </li>
+
 
 
 

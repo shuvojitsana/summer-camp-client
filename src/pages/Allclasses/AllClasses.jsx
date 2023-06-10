@@ -3,7 +3,7 @@ import useAllClasses from "../../hooks/useAllClasses";
 import AllClassCard from "./AllClassCard";
 
 
-
+//  TODO implement pagination here on this page
 const AllClasses = () => {
     const [classes] = useAllClasses();
     return (
