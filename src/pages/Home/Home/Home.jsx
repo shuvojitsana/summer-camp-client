@@ -1,3 +1,7 @@
+
+import InstroctorCard from "../../InstractorCard/InstroctorCard";
+import PopularClass from "../../PopularClass/Popularclass";
+import StudentWorks from "../../StudentWorks/StudentWorks";
 import About from "../About/About";
 import Banner from "../Banner/Banner";
 
@@ -5,9 +9,12 @@ import Banner from "../Banner/Banner";
 const Home = () => {
     return (
         <div>
-            <h2>This is Home</h2>
             <Banner></Banner>
             <About></About>
+            <PopularClass></PopularClass>
+            <InstroctorCard></InstroctorCard>
+            <StudentWorks></StudentWorks>
+            
         </div>
     );
 };

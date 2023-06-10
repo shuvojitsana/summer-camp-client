@@ -9,6 +9,10 @@ import Instructors from "../pages/Instractor/Instructors";
 import AllClasses from "../pages/Allclasses/AllClasses";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import Private from "../Components/Private";
+import PrivateRoutes from "./PrivateRoutes";
+import Dashboard from "../Layout/Dashboard";
+import MySelectedClass from "../pages/Dashboard/My_Selected_Classes/MySelectedClass";
 
   export  const router = createBrowserRouter([
     {
@@ -33,13 +37,28 @@ import Register from "../pages/Register/Register";
           element:<AllClasses></AllClasses>
         },
         {
+          path:"/private",
+          element:<PrivateRoutes><Private></Private></PrivateRoutes>
+        },
+        {
           path:"/login",
           element:<Login></Login>
         },
         {
-          path:"register",
+          path:"/register",
           element:<Register></Register>
         }
       ]
     },
+    {
+      path:'dashboard',
+      element:<Dashboard></Dashboard>,
+      errorElement:<Error></Error>,
+      children:[
+        {
+          path:'mySelectedClass',
+          element:<MySelectedClass></MySelectedClass>
+        }
+      ]
+    }
   ]);

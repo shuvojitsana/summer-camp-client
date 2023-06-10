@@ -1,7 +1,18 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const NavBar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+
 
     const navOptions = <>
 
@@ -9,14 +20,28 @@ const NavBar = () => {
         <li><Link to="/about">About</Link></li>
         <li><Link to="/instructors">Instructors</Link></li>
         <li><Link to="/allClasses">All Classes</Link></li>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <li><Link to="/login">Login</Link></li>
-        
+        <li>
+            <Link to="/dashboard/mySelectedClass">Dashboard</Link>
+        </li>
+
+
+
+        {
+            user ? <>
+                <span>
+                    {user?.displayName}
+                </span>
+                <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
+            </> : <>
+                <li><Link to="/login">Login</Link></li>
+            </>
+        }
+
 
     </>
 
     return (
-        <div className="navbar bg-base-100" >
+        <div className="navbar fixed z-10 bg-opacity-10 bg-black text-white max-w-screen-xl" >
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -34,7 +59,9 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <Link to='/'>
+                    <button className="btn rounded-lg btn-active bg-[#ea4a34] text-white hover:bg-white hover:text-black mr-7">Get started</button>
+                </Link>
             </div>
         </div>
     );

@@ -7,7 +7,7 @@ const useInstructor = () => {
     
 
     useEffect(() => {
-        fetch('Instructor.json')
+        fetch('http://localhost:5000/instractors')
             .then(res => res.json())
             .then(data => {
                 setInstructor(data);

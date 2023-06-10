@@ -4,6 +4,7 @@
       "picture": "https://images.pexels.com/photos/12846571/pexels-photo-12846571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "name": "Kaitlin Espinoza",
       "email": "kaitlinespinoza@zialactic.com",
+      "category": "popular_teacher",
       "phone": "+1 (869) 572-3412",
       "about": "Velit minim consequat occaecat dolor. Lorem magna sint eu veniam proident aliqua laboris esse. Laboris ea non amet non dolore. Reprehenderit ullamco magna deserunt ex nulla est commodo. Ullamco labore velit cillum dolor do eu cillum anim id exercitation. Et consequat incididunt proident amet. Culpa excepteur occaecat proident culpa ex consectetur laboris non dolore enim magna.\r\n"
     },
@@ -21,6 +22,7 @@
       "name": "Jeannie Finley",
       "email": "jeanniefinley@zialactic.com",
       "phone": "+1 (843) 444-2942",
+      "category": "popular_teacher",
       "about": "Proident do consectetur fugiat tempor exercitation adipisicing mollit ut aute. Culpa qui et minim fugiat aute ipsum nisi. Velit consequat et fugiat duis esse ipsum nulla laboris commodo ut laborum labore. Laboris eu velit ea do ad velit pariatur nostrud commodo ad nisi dolor voluptate. Laboris ullamco nostrud cillum cupidatat anim incididunt consectetur adipisicing aliqua dolore occaecat do.\r\n"
     },
     {
@@ -29,6 +31,7 @@
       "name": "Young Tyson",
       "email": "youngtyson@zialactic.com",
       "phone": "+1 (896) 599-3435",
+      "category": "popular_teacher",
       "about": "Laborum cillum ea tempor nulla pariatur consequat cillum aliquip culpa sunt aliquip ipsum dolore. Voluptate dolor cillum deserunt ullamco dolore veniam id. Aliquip sit officia ipsum irure et voluptate pariatur amet labore. Magna sint magna commodo dolor amet labore eiusmod incididunt cupidatat aute excepteur.\r\n"
     },
     {
@@ -37,6 +40,7 @@
       "name": "Brandi Salas",
       "email": "brandisalas@zialactic.com",
       "phone": "+1 (831) 534-3248",
+      "category": "popular_teacher",
       "about": "Laborum consequat laboris sint Lorem exercitation pariatur aliquip Lorem. Dolore exercitation culpa nostrud consectetur ullamco non excepteur nulla fugiat nostrud. Lorem dolor qui incididunt sunt dolor dolor exercitation eiusmod dolor minim minim sint tempor officia.\r\n"
     },
     {
@@ -53,6 +57,7 @@
       "name": "Joy Mondal",
       "email": "jordanhaley@zialactic.com",
       "phone": "+1 (851) 555-3810",
+      "category": "popular_teacher",
       "about": "Eiusmod non irure ex Lorem amet velit sint eu. Ea nulla sint et cillum ullamco. Nulla ipsum irure sunt sint magna eiusmod cillum cillum culpa. Adipisicing ullamco ex nulla reprehenderit.\r\n"
     },
     

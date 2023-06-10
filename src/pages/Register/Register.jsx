@@ -1,11 +1,39 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
-    const { register, handleSubmit,  formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit, reset,   formState: { errors },  } = useForm();
+    const {createUser, updateUserProfile, handleGoogleSignIn} = useContext(AuthContext);
+    const navigate = useNavigate();
+
+
+    const onSubmit = data => {
+        console.log(data);
+        createUser(data.email, data.password)
+        .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            updateUserProfile(data.name, data.photoURL)
+            .then(() =>{
+                console.log('user profile info update')
+                reset();
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'User created successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                  navigate('/');
+            })
+            .catch(error => console.log(error))
+        })
+    };
 
     
     return (
@@ -29,7 +57,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">PhotoURL</span>
                                 </label>
-                                <input type="photoUrl" {...register("photoURL",  { required: true })} placeholder="photoURL" className="input input-bordered" />
+                                <input type="photoURL" {...register("photoURL",  { required: true })} placeholder="photoURL" className="input input-bordered" />
                                 {errors.photoURL && <span className="text-red-700">PhotoURL is required</span>}
                             </div>
                             <div className="form-control">
@@ -48,6 +76,7 @@ const Register = () => {
                                     pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/})} placeholder="password" className="input input-bordered" />
                                     {errors.password?.type === 'minLength' && <p className="text-red-700">password must be 6 Characters</p>}
                                     {errors.password?.type === 'pattern' && <p className="text-red-700">password must have one upper case one logger case one number or one spicial charat</p>}
+                                    {errors.password && <span className="text-red-700">Password is required</span>}
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -58,6 +87,8 @@ const Register = () => {
                                     pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/ })}  placeholder="confirmPassword" className="input input-bordered" />
                                     {errors.password?.type === 'minLength' && <p className="text-red-700">password must be 6 Characters</p>}
                                     {errors.password?.type === 'pattern' && <p className="text-red-700">password must have one upper case one logger case one number or one spicial charat</p>}
+                                    {errors.password && <span className="text-red-700">Password is required</span>}
+                                    
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
@@ -68,7 +99,7 @@ const Register = () => {
                         </form>
                         <p className="text-center">Already have an account? <Link className="text-[#ea4a34]" to="/login">Login</Link></p>
                         <p className="text-center">Or sign in with</p>
-                        <button className=" flex justify-center items-center">
+                        <button onClick={handleGoogleSignIn} className=" flex justify-center items-center">
                         <span className="btn w-14 h-14 rounded-full hover:text-white  hover:bg-[#ea4a34] text-center"><FaGoogle></FaGoogle></span>
                         </button>
                     </div>
