@@ -1,13 +1,16 @@
 import { FaHome, FaWallet } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useClasses from "../hooks/useClasses";
+import useAdmin from "../hooks/useAdmin";
 
 
 const Dashboard = () => {
   const [classes] = useClasses();
 
   // TODO load data from the server to have dynamic isAdmin or isInstructor based on the data 
-  const isAdmin = true;
+  // const isAdmin = true;
+  const [isAdmin] = useAdmin();
+  console.log(isAdmin);
   // const isInstructor = true;
 
   return (
@@ -25,7 +28,7 @@ const Dashboard = () => {
           {/* Sidebar content here */}
 
           {
-            isAdmin ? <>
+            isAdmin?.admin ? <>
 
               <li><NavLink to="/dashboard/adminHome"><FaHome></FaHome> Admin Home</NavLink></li>
               <li>
@@ -35,15 +38,6 @@ const Dashboard = () => {
               </li>
               <li><NavLink to="/dashboard/allUsers">All Users</NavLink></li>
             </> : 
-            
-            // isInstructor ? <>
-            //   <li><NavLink to="/dashboard/InstructorHome"><FaHome></FaHome> Instructor Home</NavLink></li>
-            //   <li>
-            //     <NavLink to="/dashboard/addAClass">Add a Class
-            //     </NavLink>
-            //   </li>
-            //   <li><NavLink to="/dashboard/myClasses">My Classes</NavLink></li>
-            // </>  : 
             
             <>
                 <li><NavLink to="/dashboard/userHome"><FaHome></FaHome> User Home</NavLink></li>

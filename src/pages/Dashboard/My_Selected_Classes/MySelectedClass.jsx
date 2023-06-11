@@ -1,6 +1,7 @@
 import { FaTrashAlt } from "react-icons/fa";
 import useClasses from "../../../hooks/useClasses";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const MySelectedClass = () => {
@@ -50,7 +51,7 @@ const MySelectedClass = () => {
             <div className="uppercase font-bold h-[60px]  flex justify-around items-center">
                 <h2>Total Selected Class: {classes.length}</h2>
                 <h2>Total Price: ${total}</h2>
-                <button className="btn btn-sm bg-[#f0a49a]">Pay</button>
+               <Link to="/dashboard/payment"> <button className="btn btn-sm bg-[#f0a49a]">Pay</button></Link>
             </div>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">

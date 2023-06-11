@@ -24,10 +24,10 @@ const NavBar = () => {
         <li><Link to="/allClasses">All Classes</Link></li>
         <li>
             <Link to="/dashboard/mySelectedClass">
-                <button className="btn">
-                    Dashboard
-                    <div className="badge badge-secondary">+{classes?.length || 0}</div>
-                </button>
+
+                Dashboard
+                <div className="badge badge-secondary">+{classes?.length || 0}</div>
+
             </Link>
         </li>
 
