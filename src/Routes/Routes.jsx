@@ -13,6 +13,7 @@ import Private from "../Components/Private";
 import PrivateRoutes from "./PrivateRoutes";
 import Dashboard from "../Layout/Dashboard";
 import MySelectedClass from "../pages/Dashboard/My_Selected_Classes/MySelectedClass";
+import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 
   export  const router = createBrowserRouter([
     {
@@ -58,6 +59,9 @@ import MySelectedClass from "../pages/Dashboard/My_Selected_Classes/MySelectedCl
         {
           path:'mySelectedClass',
           element:<MySelectedClass></MySelectedClass>
+        },{
+          path:'allUsers',
+          element:<AllUsers></AllUsers>
         }
       ]
     }

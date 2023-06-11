@@ -1,16 +1,16 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 
 
 const Register = () => {
     const { register, handleSubmit, reset,   formState: { errors },  } = useForm();
-    const {createUser, updateUserProfile, handleGoogleSignIn} = useContext(AuthContext);
+    const {createUser, updateUserProfile,} = useContext(AuthContext);
     const navigate = useNavigate();
-    const location = useLocation();
+    
 
 
     const onSubmit = data => {
@@ -19,20 +19,32 @@ const Register = () => {
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser);
+
             updateUserProfile(data.name, data.photoURL)
             .then(() =>{
-                console.log('user profile info update')
-                reset();
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'User created successfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                  })
-                  navigate('/', {state: {from: location}});
+                    const saveUser = {name: data.name, email: data.email}
+                fetch('http://localhost:5000/users', {
+                    method:'POST',
+                    headers:{'content-type': 'application/json'},
+                    body: JSON.stringify(saveUser)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if(data.insertedId){
+                        reset();
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'User created successfully',
+                            showConfirmButton: false,
+                            timer: 1500
+                          })
+                          navigate('/');
+                    }
+                })
+
             })
-            .catch(error => console.log(error))
+            .catch(error => console.log(error));
         })
     };
 
@@ -100,9 +112,8 @@ const Register = () => {
                         </form>
                         <p className="text-center">Already have an account? <Link className="text-[#ea4a34]" to="/login">Login</Link></p>
                         <p className="text-center">Or sign in with</p>
-                        <button onClick={handleGoogleSignIn} className=" flex justify-center items-center">
-                        <span className="btn w-14 h-14 rounded-full hover:text-white  hover:bg-[#ea4a34] text-center"><FaGoogle></FaGoogle></span>
-                        </button>
+                        <SocialLogin></SocialLogin>
+                       
                     </div>
                 </div>
             </div>

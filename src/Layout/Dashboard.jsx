@@ -4,38 +4,69 @@ import useClasses from "../hooks/useClasses";
 
 
 const Dashboard = () => {
-    const [classes] = useClasses();
-    return (
-        <div className="drawer lg:drawer-open">
-        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center">
-          {/* Page content here */}
-          <Outlet></Outlet>
-          <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-        
-        </div> 
-        <div className="drawer-side bg-[#f0a49a]">
-          <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-          <ul className="menu p-4 w-80 h-full text-base-content">
-            {/* Sidebar content here */}
-            <li><NavLink to="/dashboard/userHome"><FaHome></FaHome> User Home</NavLink></li>
-            <li><NavLink to="/dashboard/paymentsHistory"><FaWallet></FaWallet> Payments History</NavLink></li>
-            <li>
-              <NavLink to="/dashboard/mySelectedClass">My Selected Class
-              <span className="badge badge-secondary">+{classes?.length || 0}</span>
-            </NavLink>
-            </li>
-            <li><NavLink to="/dashboard/myEnrolledClasses">My Enrolled Classes</NavLink></li>
+  const [classes] = useClasses();
 
-            <div className="divider"></div>
-            <li><NavLink to="/"><FaHome></FaHome> Home</NavLink></li>
-            <li><NavLink to="/allClasses">All Class</NavLink></li>
-            <li><NavLink to="/instructors"> Instructor</NavLink></li>
-          </ul>
-        
-        </div>
+  // TODO load data from the server to have dynamic isAdmin or isInstructor based on the data 
+  const isAdmin = true;
+  // const isInstructor = true;
+
+  return (
+    <div className="drawer lg:drawer-open">
+      <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content flex flex-col items-center justify-center">
+        {/* Page content here */}
+        <Outlet></Outlet>
+        <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+
       </div>
-    );
+      <div className="drawer-side bg-[#f0a49a]">
+        <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+        <ul className="menu p-4 w-80 h-full text-base-content">
+          {/* Sidebar content here */}
+
+          {
+            isAdmin ? <>
+
+              <li><NavLink to="/dashboard/adminHome"><FaHome></FaHome> Admin Home</NavLink></li>
+              <li>
+                <NavLink to="/dashboard/manageClasses">Manage Classes
+                 
+                </NavLink>
+              </li>
+              <li><NavLink to="/dashboard/allUsers">All Users</NavLink></li>
+            </> : 
+            
+            // isInstructor ? <>
+            //   <li><NavLink to="/dashboard/InstructorHome"><FaHome></FaHome> Instructor Home</NavLink></li>
+            //   <li>
+            //     <NavLink to="/dashboard/addAClass">Add a Class
+            //     </NavLink>
+            //   </li>
+            //   <li><NavLink to="/dashboard/myClasses">My Classes</NavLink></li>
+            // </>  : 
+            
+            <>
+                <li><NavLink to="/dashboard/userHome"><FaHome></FaHome> User Home</NavLink></li>
+                <li><NavLink to="/dashboard/paymentsHistory"><FaWallet></FaWallet> Payments History</NavLink></li>
+                <li>
+                  <NavLink to="/dashboard/mySelectedClass">My Selected Class
+                    <span className="badge badge-secondary">+{classes?.length || 0}</span>
+                  </NavLink>
+                </li>
+                <li><NavLink to="/dashboard/myEnrolledClasses">My Enrolled Classes</NavLink></li>
+              </>
+          }
+
+
+          <div className="divider"></div>
+          <li><NavLink to="/"><FaHome></FaHome> Home</NavLink></li>
+          <li><NavLink to="/allClasses">All Class</NavLink></li>
+          <li><NavLink to="/instructors"> Instructor</NavLink></li>
+        </ul>
+
+      </div>
+    </div>
+  );
 };
 
 export default Dashboard;
