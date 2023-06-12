@@ -2,6 +2,7 @@ import { FaHome, FaWallet } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useClasses from "../hooks/useClasses";
 import useAdmin from "../hooks/useAdmin";
+import useInstructor from "../hooks/useInstructor";
 
 
 const Dashboard = () => {
@@ -11,7 +12,8 @@ const Dashboard = () => {
   // const isAdmin = true;
   const [isAdmin] = useAdmin();
   console.log(isAdmin);
-  // const isInstructor = true;
+  const [isInstructor] = useInstructor();
+  console.log(isInstructor);
 
   return (
     <div className="drawer lg:drawer-open">
@@ -32,13 +34,44 @@ const Dashboard = () => {
 
               <li><NavLink to="/dashboard/adminHome"><FaHome></FaHome> Admin Home</NavLink></li>
               <li>
-                <NavLink to="/dashboard/manageClasses">Manage Classes
-                 
+                <NavLink to="/dashboard/manageItem">Manage Classes
+
+                </NavLink>
+                <NavLink to="/dashboard/addAClass">Add A Class
+
                 </NavLink>
               </li>
               <li><NavLink to="/dashboard/allUsers">All Users</NavLink></li>
-            </> : 
+            </> :
+
+              // isInstructor ? <>
+              //   <li><NavLink to="/dashboard/adminHome"><FaHome></FaHome> Instructor Home</NavLink></li>
+              //   <li>
+              //     <NavLink to="/dashboard/manageItem">Manage Classes
+
+              //     </NavLink>
+              //     <NavLink to="/dashboard/addAClass">Add A Class
+
+              //     </NavLink>
+              //   </li>
+              // </>
+              //   :
+                <>
+                  <li><NavLink to="/dashboard/userHome"><FaHome></FaHome> User Home</NavLink></li>
+                  <li><NavLink to="/dashboard/paymentsHistory"><FaWallet></FaWallet> Payments History</NavLink></li>
+                  <li>
+                    <NavLink to="/dashboard/mySelectedClass">My Selected Class
+                      <span className="badge badge-secondary">+{classes?.length || 0}</span>
+                    </NavLink>
+                  </li>
+                  <li><NavLink to="/dashboard/myEnrolledClasses">My Enrolled Classes</NavLink></li>
+                </>
+          }
+
+
+          {/* {
             
+            :
             <>
                 <li><NavLink to="/dashboard/userHome"><FaHome></FaHome> User Home</NavLink></li>
                 <li><NavLink to="/dashboard/paymentsHistory"><FaWallet></FaWallet> Payments History</NavLink></li>
@@ -49,7 +82,7 @@ const Dashboard = () => {
                 </li>
                 <li><NavLink to="/dashboard/myEnrolledClasses">My Enrolled Classes</NavLink></li>
               </>
-          }
+          } */}
 
 
           <div className="divider"></div>

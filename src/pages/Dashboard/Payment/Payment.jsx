@@ -12,7 +12,7 @@ const Payment = () => {
     const total = classes.reduce((sum, item) =>sum + item.price, 0);
     const price = parseFloat(total.toFixed(2));
     return (
-        <div className="w-full  items-center">
+        <div className="w-2/3">
             <h2>Taka o taka tumi ura ura acho...</h2>
             <Elements stripe={stripePromise}>
                 <CheckOutFrom classes={classes} price={price}></CheckOutFrom>

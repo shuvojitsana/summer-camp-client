@@ -26,7 +26,7 @@ const NavBar = () => {
             <Link to="/dashboard/mySelectedClass">
 
                 Dashboard
-                <div className="badge badge-secondary">+{classes?.length || 0}</div>
+                <div className="badge bg-[#ea4a34] text-white">+{classes?.length || 0}</div>
 
             </Link>
         </li>
