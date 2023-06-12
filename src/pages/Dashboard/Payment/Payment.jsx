@@ -1,16 +1,21 @@
 import { loadStripe } from "@stripe/stripe-js";
 import CheckOutFrom from "./CheckOutFrom";
 import { Elements } from "@stripe/react-stripe-js";
+import useClasses from "../../../hooks/useClasses";
 
 
 const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
 
 const Payment = () => {
+    const [classes] = useClasses();
+
+    const total = classes.reduce((sum, item) =>sum + item.price, 0);
+    const price = parseFloat(total.toFixed(2));
     return (
         <div className="w-full  items-center">
             <h2>Taka o taka tumi ura ura acho...</h2>
             <Elements stripe={stripePromise}>
-                <CheckOutFrom></CheckOutFrom>
+                <CheckOutFrom classes={classes} price={price}></CheckOutFrom>
             </Elements>
         </div>
     );
