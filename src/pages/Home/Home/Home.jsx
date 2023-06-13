@@ -1,6 +1,7 @@
 
 import InstroctorCard from "../../InstractorCard/InstroctorCard";
-import PopularClass from "../../PopularClass/Popularclass";
+import PopularClass from "../../PopularClass/PopularClass";
+
 import StudentWorks from "../../StudentWorks/StudentWorks";
 import About from "../About/About";
 import Banner from "../Banner/Banner";

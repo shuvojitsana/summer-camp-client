@@ -16,7 +16,7 @@ const AllClassCard = ({ item }) => {
         console.log(item);
         if(user && user.email){
             const orderItem = {classesId : _id, name, image, price, Instructor_name, Available_seats, email: user.email}
-            fetch('http://localhost:5000/classes',{
+            fetch('https://summer-camp-school-server-six.vercel.app/classes',{
                 method:'POST',
                 headers:{'content-type':'application/json'},
                 body: JSON.stringify(orderItem) 
