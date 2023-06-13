@@ -12,7 +12,7 @@ const useInstructor = () => {
  const {data: isInstructor , isLoading : isInstructorLoading} = useQuery({
      queryKey:['isInstructor', user?.email],
      queryFn: async() =>{
-         const res = await fetch(`https://summer-camp-school-server-six.vercel.app/users/instructor/${user?.email}`, {
+         const res = await fetch(`https://summer-camp-school-server-six.vercel.app/users/${user?.email}`, {
              headers: {
                  authorization: `bearer ${token}`
              }
