@@ -8,14 +8,14 @@ import Banner from "../Banner/Banner";
 
 const Home = () => {
     return (
-        // <div>
-        //     <Banner></Banner>
-        //     <About></About>
-        //     <PopularClass></PopularClass>
-        //     <InstroctorCard></InstroctorCard>
-        //     <StudentWorks></StudentWorks>
+        <div>
+            <Banner></Banner>
+            <About></About>
+            <PopularClass></PopularClass>
+            <InstroctorCard></InstroctorCard>
+            <StudentWorks></StudentWorks>
             
-        // </div>
+        </div>
     );
 };
 
