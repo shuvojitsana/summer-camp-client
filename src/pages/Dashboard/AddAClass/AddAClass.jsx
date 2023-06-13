@@ -23,7 +23,7 @@ const AddAClass = () => {
                     const {name, price, about,Available_seats,Instructor_name, email, category} = data;
                     const newItem = {name, price: parseFloat(price), Instructor_name, email, about, Available_seats, category, image: imgURL}
                     console.log(newItem);
-                    fetch('http://localhost:5000/allClasses',{
+                    fetch('https://summer-camp-school-server-six.vercel.app/allClasses',{
                         method:'POST',
                         headers:{
                             'content-type' : 'application/json'
