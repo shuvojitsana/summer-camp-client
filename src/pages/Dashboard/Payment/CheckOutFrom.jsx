@@ -16,7 +16,7 @@ const CheckOutFrom = ({ price, classes }) => {
 
     useEffect(() => {
         if (price > 0) {
-            fetch('https://summer-camp-school-server-six.vercel.app/create-payment-intent', {
+            fetch('http://localhost:5000/create-payment-intent', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -96,7 +96,7 @@ const CheckOutFrom = ({ price, classes }) => {
                 classesItem: classes.map(item => item.classesId)
             }
 
-            fetch('https://summer-camp-school-server-six.vercel.app/payment', {
+            fetch('http://localhost:5000/payment', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

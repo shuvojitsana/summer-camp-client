@@ -1,13 +1,24 @@
 
 import CardInstructor from "./CardInstructor";
-import useInstructor from "../../hooks/useInstructor";
+// import useInstructor from "../../hooks/useInstructor";
 import Caver from "../../Components/Error/Corver/Caver";
+import { useEffect, useState } from "react";
 
 
 
 const Instructors = () => {
 
-    const [instructors] = useInstructor();
+    // const [instructors] = useInstructor();
+    const [instructors, setInstructors] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/instractors')
+            .then(res => res.json())
+            .then(data => {
+                
+                setInstructors(data);
+            })
+    }, [])
+    
     return (
         <div>
             <Caver></Caver>
